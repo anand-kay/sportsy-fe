@@ -1,0 +1,27 @@
+<div class="top-wrapper">
+    <div>
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div>
+        Sort by:
+        <select #sortselect (change)="onSortChange($event.target.value)">
+            <option value="default">Default</option>
+            <option value="highprice">Highest price</option>
+            <option value="lowprice">Lowest price</option>
+            <option value="highrating">Highest rating</option>
+            <option value="lowrating">Lowest rating</option>
+        </select>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="product-list">
+        <app-product-list [data]="data" [sortBy]="sort" [p]="p" [total]="total"></app-product-list>
+    </div>
+</div>
+
+<div class="has-text-centered">
+    <div class="spinner" [ngClass]="{ 'hidden': !loading }"></div>
+    <pagination-controls (pageChange)="getPage($event)" id="server"></pagination-controls>
+</div>

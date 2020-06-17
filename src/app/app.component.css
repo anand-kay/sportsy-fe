@@ -1,0 +1,11 @@
+.home-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 28px;
+}
+
+.home-nav {
+    margin: 0 28px;
+}

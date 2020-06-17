@@ -1,0 +1,62 @@
+<p>
+  <b>Reviews&nbsp;&nbsp;&nbsp;&nbsp;{{ product.rating }} stars</b>
+  ({{ product.reviews.length }})&nbsp;&nbsp;&nbsp;&nbsp;<span *ngIf="isAuthenticated()" (click)="writeReviewClicked()">Write a review</span>
+</p>
+
+<ul>
+  <li *ngFor="let review of product.reviews">
+
+    <div class="top-wrapper">
+      <img src="https://www.chaarat.com/wp-content/uploads/2017/08/placeholder-user-300x300.png">
+
+      <div class="username-rating">
+        <p class="username">{{ review._userid.substr(review._userid.length - 10) }}</p>
+
+        <p class="rating"><b>{{ review.star }} stars</b></p>
+      </div>
+
+      <p class="date">{{ review.epoch | date }}</p>
+    </div>
+
+    <p class="review">{{ review.review }}</p>
+
+  </li>
+</ul>
+
+<div *ngIf="showReviewModal">
+  <div (click)="backdropClicked()" class="modal-wrapper">
+  </div>
+
+  <div class="modal-card">
+    <h1 class="form-title">
+      <strong>
+        Write review
+      </strong>
+    </h1>
+
+    <div>
+      <div class="rating-wrapper">
+        <span (click)="onStarOne()" [class.checked]="one" class="fa fa-star"></span>
+        <span (click)="onStarTwo()" [class.checked]="two" class="fa fa-star"></span>
+        <span (click)="onStarThree()" [class.checked]="three" class="fa fa-star"></span>
+        <span (click)="onStarFour()" [class.checked]="four" class="fa fa-star"></span>
+        <span (click)="onStarFive()" [class.checked]="five" class="fa fa-star"></span>
+      </div>
+
+      <div>
+
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+          <div class="form-group">
+            <textarea type="text" rows="8" cols="56" ngModel name="review" required class="form-control"
+              placeholder="Write your review here"></textarea>
+          </div>
+
+          <button [disabled]="!form.valid" type="submit" class="btn">Submit</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="name-btns-wrapper">
+  <h1>
+    {{ user.name }}
+  </h1>
+
+  <div>
+    <button (click)="onWishlistClicked()">View wishlist</button>
+
+    <button (click)="onCartClicked()">View cart</button>
+
+    <a href="/" (click)="onLogoutClicked()">Logout</a>
+  </div>
+</div>
+
+<div class="purchase-address-wrapper">
+  <div class="purchase">
+
+    <h3>Purchase history</h3>
+
+    <ul>
+      <li (click)="purchaseItemClicked(purchase.product._id)" *ngFor="let purchase of purchases">
+
+        <!-- <img [src]="purchase.product.image"> -->
+
+        <div>
+
+          <h2>{{ purchase.product.title }}</h2>
+
+          <div class="seller-epoch-wrapper">
+            <p>{{ purchase.product.seller }}</p>
+
+            <p>{{ purchase.epoch | date }}</p>
+          </div>
+
+          <p class="description">{{ purchase.product.description }}</p>
+
+          <div class="price-quantity-wrapper">
+            <p><b>US$&nbsp;{{ purchase.price }}</b></p>
+
+            <p>Quantity: {{ purchase.quantity }}</p>
+          </div>
+
+        </div>
+
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="address">
+
+    <h3>Address</h3>
+
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+      <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" ngModel name="email" email required class="form-control" id="Email" [value]="user.email"
+          disabled>
+      </div>
+
+      <div class="form-group">
+        <label for="Houseno">House number</label>
+        <input type="text" ngModel name="houseno" class="form-control" id="Houseno" [value]="user.houseno">
+      </div>
+
+      <div class="form-group">
+        <label for="Street">Street</label>
+        <input type="text" ngModel name="street" class="form-control" id="Street" [value]="user.street">
+      </div>
+
+      <div class="form-group">
+        <label for="City">City</label>
+        <input type="text" ngModel name="city" class="form-control" id="City" [value]="user.city">
+      </div>
+
+      <div class="form-group">
+        <label for="Pincode">Pincode</label>
+        <input type="number" ngModel name="pincode" class="form-control" id="Pincode" [value]="user.pincode">
+      </div>
+
+      <div class="form-group">
+        <label for="State">State</label>
+        <input type="text" ngModel name="state" class="form-control" id="State" [value]="user.state">
+      </div>
+
+      <div class="form-group">
+        <label for="Country">Country</label>
+        <input type="text" ngModel name="country" class="form-control" id="Country" [value]="user.country">
+      </div>
+
+      <div class="form-btn">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="image-right">
+  <img [src]="product.image" class="main-img">
+
+  <app-right-info class="right-info" [product]="product"></app-right-info>
+</div>
+
+<div style="height: 1px; background: #d1d1d1; margin: 0 28px;"></div>
+
+<div class="reviews-recom">
+  <app-reviews [product]="product" (reviewSubmittedEvent)="onReviewSubmitted($event)" class="reviews"></app-reviews>
+
+  <app-recommendations class="recommendations"></app-recommendations>
+</div>

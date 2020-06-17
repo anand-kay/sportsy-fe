@@ -1,0 +1,31 @@
+<!-- <div class="home-top">
+  <div>
+    <app-logo-search></app-logo-search>
+  </div>
+
+  <div *ngIf="!isAuthenticated">
+    <app-auth-btn></app-auth-btn>
+  </div>
+
+  <div *ngIf="isAuthenticated">
+    <app-cart-acc></app-cart-acc>
+  </div>
+</div>
+
+<div class="home-nav">
+  <app-nav></app-nav>
+</div>
+
+<div style="background: #e3e3e3; height: 2px;"></div> -->
+
+<div class="home-items">
+  <app-home-items [title]="featuredTitle" [items]="featuredItems"></app-home-items>
+</div>
+
+<div class="home-items">
+  <app-home-items [title]="recommendedTitle" [items]="recommendedItems"></app-home-items>
+</div>
+
+<div class="home-items">
+  <app-home-items [title]="recentTitle" [items]="recentItems"></app-home-items>
+</div>

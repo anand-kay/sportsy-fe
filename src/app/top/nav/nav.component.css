@@ -1,0 +1,262 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li p {
+    margin: 0;
+    padding: 8px;
+}
+
+.cricket-nav-item p {
+    padding-left: 0 !important;
+}
+
+.swimming-nav-item p {
+    padding-right: 0 !important;
+}
+
+.cricket-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.cricket-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.cricket-nav-item:hover .cricket-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+.cricket-nav-item:hover {
+    cursor: pointer;
+}
+
+.cricket-dropdown div:hover {
+    background: #ececec;
+}
+
+.football-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.football-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.football-nav-item:hover .football-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+.football-nav-item:hover {
+    cursor: pointer;
+}
+
+.football-dropdown div:hover {
+    background: #ececec;
+}
+
+.badminton-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.badminton-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.badminton-nav-item:hover .badminton-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+.badminton-nav-item:hover {
+    cursor: pointer;
+}
+
+.badminton-dropdown div:hover {
+    background: #ececec;
+}
+
+.tennis-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.tennis-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.tennis-nav-item:hover .tennis-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+.tennis-nav-item:hover {
+    cursor: pointer;
+}
+
+.tennis-dropdown div:hover {
+    background: #ececec;
+}
+
+.cycling-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.cycling-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.cycling-nav-item:hover .cycling-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+.cycling-nav-item:hover {
+    cursor: pointer;
+}
+
+.cycling-dropdown div:hover {
+    background: #ececec;
+}
+
+.basket-ball-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.basket-ball-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.basket-ball-nav-item:hover .basket-ball-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+}
+
+.basket-ball-nav-item:hover {
+    cursor: pointer;
+}
+
+.basket-ball-dropdown div:hover {
+    background: #ececec;
+}
+
+.swimming-dropdown {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility;
+    position: absolute;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.swimming-dropdown div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.swimming-nav-item:hover .swimming-dropdown{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 500ms;
+    right:0;
+}
+
+.swimming-nav-item:hover {
+    cursor: pointer;
+}
+
+.swimming-dropdown div:hover {
+    background: #ececec;
+}

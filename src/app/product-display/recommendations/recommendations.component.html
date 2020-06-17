@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <b>Recommendations</b>
+
+  <ul>
+    <li (click)="onRecClicked(product._id)" *ngFor="let product of products">
+      <img class="rec-img" [src]=product.image>
+
+      <p class="rec-price">
+        <b>US$ {{ product.price }}</b>
+      </p>
+    </li>
+  </ul>
+</div>

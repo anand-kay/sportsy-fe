@@ -1,0 +1,41 @@
+<h1>
+  {{ cartItems.length }} items in your cart
+</h1>
+
+<div class="main-wrapper">
+  <ul>
+    <li *ngFor="let cartItem of cartItems">
+
+      <div class="img-detail">
+        <img [src]="cartItem.product.image">
+
+        <div class="title-remove">
+          <p class="prod-title">{{ cartItem.product.title }} dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title dummy title</p>
+
+          <p (click)="onRemoveClicked(cartItem.product._id)" class="remove-btn">Remove</p>
+        </div>
+      </div>
+
+      <select (change)="onChange($event.target.value, cartItem.product._id)">
+        <option value="one" [selected]="cartItem.quantity == 1 ? true : false">1</option>
+        <option value="two" [selected]="cartItem.quantity == 2 ? true : false">2</option>
+        <option value="three" [selected]="cartItem.quantity == 3 ? true : false">3</option>
+        <option value="four" [selected]="cartItem.quantity == 4 ? true : false">4</option>
+        <option value="five" [selected]="cartItem.quantity == 5 ? true : false">5</option>
+      </select>
+
+      <p><b>US$ {{ cartItem.product.price }}</b></p>
+
+    </li>
+  </ul>
+
+  <div class="total-button">
+    <div class="total-wrapper">
+      <p>Total ({{ cartItems.length }} items)</p>
+
+      <p><b>US$ {{ totalPrice }}</b></p>
+    </div>
+
+    <button [disabled]="cartItems.length == 0 ? true : false" (click)="onPayClicked()" class="pay-btn">Pay and place order</button>
+  </div>
+</div>

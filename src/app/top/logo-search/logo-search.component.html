@@ -1,0 +1,11 @@
+<div class="logo-search">
+  <h1 (click)="onLogoClicked()">
+    Sportsy
+  </h1>
+
+  <div class="search">
+    <input #searchInput (keyup.enter)="onSearchSubmit()" type="text" placeholder="Search for items" [(ngModel)]="searchText">
+
+    <button (click)="onSearchSubmit()" type="button">Search</button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div (click)="backdropClicked()" class="modal-wrapper">
+</div>
+
+<div class="modal-card">
+
+  <h1 class="form-title">
+    <strong>
+      Login
+    </strong>
+  </h1>
+
+  <div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+      <div class="form-group">
+        <label for="exampleInputEmail">Email</label>
+        <input type="email" ngModel name="email" email required class="form-control" id="exampleInputEmail"
+          placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword">Password</label>
+        <input type="password" ngModel name="password" required class="form-control" id="exampleInputPassword"
+          placeholder="Enter password">
+      </div>
+
+      <button [disabled]="!form.valid" type="submit" class="btn">Login</button>
+
+    </form>
+
+  </div>
+
+</div>

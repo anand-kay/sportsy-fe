@@ -1,0 +1,21 @@
+<div class="title-button">
+  <h2 class="title">
+    {{ title }}
+  </h2>
+
+  <div>
+    <img (click)="scrollLeft()" class="left-button" src="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-1/16/26-512.png">
+
+    <img (click)="scrollRight()" class="right-button" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672374-chevron-right-512.png">
+  </div>
+</div>
+
+<ul #itemsul class="items">
+  <li (click)="onItemClicked(item.id)" *ngFor="let item of items">
+    <img class="item-img" [src]=item.imgUrl>
+
+    <p>
+      {{ item.price }}
+    </p>
+  </li>
+</ul>

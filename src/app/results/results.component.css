@@ -1,0 +1,29 @@
+.main-content {
+    margin: 0 28px;
+}
+
+.top-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 28px;
+}
+
+select {
+    background-color: white;
+    padding: 6px 0;
+    margin-left: 20px;
+}
+
+.product-list {
+    width: 100%;
+}
+
+.has-text-centered {
+    margin: 40px 28px;
+}
+
+.has-text-centered pagination-controls {
+    text-align: center;
+}

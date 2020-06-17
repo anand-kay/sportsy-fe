@@ -1,0 +1,23 @@
+<h1>Wishlist</h1>
+
+<ul>
+  <li (click)="onItemClicked(wishlistItem)" *ngFor="let wishlistItem of wishlistItems">
+
+    <!-- <img [src]="wishlistItem.product.image"> -->
+
+    <div>
+
+      <h2>{{ wishlistItem.product.title }}</h2>
+
+      <div class="seller-price-wrapper">
+        <p>{{ wishlistItem.product.seller }}</p>
+
+        <p>US$ {{ wishlistItem.product.price }}</p>
+      </div>
+
+      <p class="description">{{ wishlistItem.product.description }}</p>
+
+    </div>
+
+  </li>
+</ul>

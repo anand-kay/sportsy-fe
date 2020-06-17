@@ -1,0 +1,35 @@
+.register {
+    color: black;
+    margin: 0 20px;
+}
+
+.register:hover,
+.register:active {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.signin {
+    height: 32px;
+    width: 82px;
+    color: black;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.signin:hover,
+.signin:active {
+    cursor: pointer;
+    color: white;
+    background: black;
+}
+
+.auth-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

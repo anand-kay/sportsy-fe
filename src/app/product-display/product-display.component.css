@@ -1,0 +1,35 @@
+.image-right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 28px;
+}
+
+.main-img {
+    width: 70%;
+    height: 600px;
+    margin-right: 28px;
+}
+
+.right-info {
+    width: 30%;
+    /* height: 600px; */
+}
+
+.reviews-recom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 28px;
+}
+
+.reviews {
+    width: 70%;
+    margin-right: 28px;
+}
+
+.recommendations {
+    width: 30%;
+}

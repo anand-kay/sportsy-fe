@@ -1,0 +1,25 @@
+<div class="home-top">
+    <div>
+        <app-logo-search (searchEvent)="searchSubmit($event)"></app-logo-search>
+    </div>
+
+    <div *ngIf="!isAuthenticated">
+        <app-auth-btn (modalOpenEvent)="onModalOpen($event)" (loginOpenEvent)="onLoginOpen($event)"></app-auth-btn>
+    </div>
+
+    <div *ngIf="isAuthenticated">
+        <app-cart-acc></app-cart-acc>
+    </div>
+</div>
+
+<div class="home-nav">
+    <app-nav (categoryEvent)="categoryClicked($event)" (subcategoryEvent)="subcategoryClicked($event)"></app-nav>
+</div>
+
+<div style="background: #e3e3e3; height: 2px;"></div>
+
+<router-outlet></router-outlet>
+
+<app-signup *ngIf="isModalOpen" (modalCloseEvent)="onModalClose($event)" (authenticateEvent)="onAuthenticateEvent($event)"></app-signup>
+
+<app-login *ngIf="isLoginOpen" (loginCloseEvent)="onLoginClose($event)" (authenticateLoginEvent)="onAuthenticateEvent($event)"></app-login>

@@ -1,0 +1,27 @@
+<ul>
+  <li (click)="onProductClicked(product._id)" *ngFor="let product of data.products | paginate: { id: 'server', itemsPerPage: 20, currentPage: p, totalItems: total }">
+
+    <img class="image" [src]="product.image">
+
+    <div class="title">
+      <span>{{ product.title }}</span>
+    </div>
+
+    <div class="seller">
+      <span>{{ product.seller }}</span>
+    </div>
+
+    <div class="rating">
+      <span><span>{{ product.rating }} stars</span> ({{ product.reviews.length }})</span>
+    </div>
+
+    <div class="price">
+      <span class="selling-price">US$ {{ calcPrice(product.discount, product.price) }}</span>
+
+      <span class="discount discounted-price" *ngIf="product.discount != 0">US$ {{ product.price }}</span>
+
+      <span class="discount" *ngIf="product.discount != 0">({{ product.discount }}% off)</span>
+    </div>
+
+  </li>
+</ul>

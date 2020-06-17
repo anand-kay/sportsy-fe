@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <div>
+    <p class="seller">
+      {{ product.seller }}
+    </p>
+
+    <p class="rating">
+      <b>{{ product.rating }} stars</b> ({{ product.reviews.length }})
+    </p>
+  </div>
+
+  <p class="title">
+    {{ product.title }}
+  </p>
+
+  <p class="description">
+    {{ product.description }}
+  </p>
+
+  <div class="price-wishlist">
+    <div class="price">
+      <span class="selling-price">US$ {{ calcPrice(product.discount, product.price) }}</span>
+
+      <span class="discounted-price" *ngIf="!isDiscountZero && product.discount != 0">US$ {{ product.price }}</span>
+
+      <div class="saving" *ngIf="!isDiscountZero && product.discount != 0">You save US$ {{ product.price - calcPrice(product.discount, product.price) }} ({{ product.discount }}%)</div>
+    </div>
+
+    <button (click)="wishlistClicked()" [disabled]="!isAuthenticated()" class="wishlist">{{ wishlistText }}</button>
+  </div>
+
+  <div class="quantity-wrapper">
+    <p>
+      Quantity:
+    </p>
+
+    <select #quantity [disabled]="!isAuthenticated()">
+      <option value="one">1</option>
+      <option value="two">2</option>
+      <option value="three">3</option>
+      <option value="four">4</option>
+      <option value="five">5</option>
+    </select>
+  </div>
+
+  <button (click)="onAddCartClicked()" [disabled]="!isAuthenticated()" class="add-cart">Add to cart</button>
+</div>

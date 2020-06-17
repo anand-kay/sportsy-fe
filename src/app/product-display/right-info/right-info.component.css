@@ -1,0 +1,116 @@
+.wrapper {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p {
+    margin: 0;
+}
+
+.seller {
+    display: inline-block;
+    color: #888888;
+    margin-right: 8px;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.title {
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    max-height: 5.1rem;
+    overflow: hidden;
+}
+
+.price {
+    display: inline-block;
+}
+
+.selling-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* .discount {
+    font-size: 0.83rem;
+    color: green;
+    margin-left: 4px;
+    margin-bottom: 2px;
+} */
+
+.discounted-price {
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin-left: 4px;
+}
+
+.saving {
+    font-size: 0.93rem;
+    color: green;
+}
+
+.price-wishlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wishlist {
+    width: 150px;
+    height: 40px;
+    background-color: #F35A2F;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.wishlist:hover:enabled {
+    cursor: pointer;
+}
+
+.wishlist:hover:disabled {
+    cursor: not-allowed;
+}
+
+.quantity-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-wrapper > select {
+    width: 150px;
+}
+
+select {
+    background-color: white;
+    height: 30px;
+}
+
+select:hover:disabled {
+    cursor: not-allowed;
+}
+
+.add-cart {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.add-cart:hover:enabled {
+    cursor: pointer;
+}
+
+.add-cart:hover:disabled {
+    cursor: not-allowed;
+}
